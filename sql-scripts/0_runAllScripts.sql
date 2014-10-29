@@ -46,8 +46,8 @@ CREATE DATABASE :database WITH OWNER :user ENCODING 'UTF8';
 -- --\ir 3_inserts.sql
 -- \ir 3_copy.sql
 
--- -- create primary keys, constraints, indexes
--- \ir 4_constraints.sql
+-- create primary keys, constraints, indexes
+\ir 5_constraints.sql
 
 -- \echo
 -- \prompt 'Execute Queries (\\q or Ctrl-C to abort)?' promptvar

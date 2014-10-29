@@ -1,11 +1,12 @@
 -- Authors: Marko Gucanin, Philipp Küng
 
 CREATE TABLE Spieler (
+  spielerName VARCHAR(255),
   name VARCHAR(255),
   vorname VARCHAR(255) NOT NULL,
   email VARCHAR(255) NOT NULL,
   passwort VARCHAR(255) NOT NULL,
-  PRIMARY KEY (name)
+  PRIMARY KEY (spielerName)
 );
 
 CREATE TABLE Team (
@@ -43,8 +44,8 @@ CREATE TABLE Spiel (
 
 CREATE TABLE IstMitglied (
   spielerName VARCHAR(255), 
-  teamId INTEGER,
-  PRIMARY KEY (spielerName, teamId)
+  teamName VARCHAR(255),
+  PRIMARY KEY (spielerName, teamName)
 );
 
 CREATE TABLE Anmeldung (
