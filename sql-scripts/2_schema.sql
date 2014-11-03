@@ -34,7 +34,7 @@ CREATE TABLE TurnierAustragung (
   PRIMARY KEY (turnierId)
 );
 
-CREATE TYPE spielModus AS ENUM ('bo5','bo4','b03','bo2','bo1');
+CREATE TYPE spielModus AS ENUM ('bo5','bo4','bo3','bo2','bo1');
 CREATE TABLE Spiel (
   spielId INTEGER,
   zeit TIMESTAMP NOT NULL,
@@ -64,6 +64,6 @@ CREATE TABLE TeamZuSpiel (
 CREATE TABLE SpielZuTurnierAustragung (
   spielId INTEGER,
   turnierId INTEGER,
-  PRIMARY KEY (spielId)
+  PRIMARY KEY (spielId, turnierId)
 );
 
