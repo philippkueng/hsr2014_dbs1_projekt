@@ -2,7 +2,7 @@
 
 CREATE TABLE Spieler (
   spielerName VARCHAR(255),
-  name VARCHAR(255),
+  name VARCHAR(255) NOT NULL,
   vorname VARCHAR(255) NOT NULL,
   email VARCHAR(255) NOT NULL,
   passwort VARCHAR(255) NOT NULL,

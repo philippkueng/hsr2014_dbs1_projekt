@@ -42,23 +42,22 @@ CREATE DATABASE :database WITH OWNER :user ENCODING 'UTF8';
 -- create schema
 \ir 2_schema.sql
 
--- -- insert data in slo-mo or use COPY for speedup
--- --\ir 3_inserts.sql
--- \ir 3_copy.sql
+-- insert data in slo-mo or use COPY for speedup
+\ir 3_copy.sql
 
 -- create primary keys, constraints, indexes
-\ir 5_constraints.sql
+\ir 4_constraints.sql
 
--- \echo
--- \prompt 'Execute Queries (\\q or Ctrl-C to abort)?' promptvar
--- :promptvar
+\echo
+\prompt 'Execute Queries (\\q or Ctrl-C to abort)?' promptvar
+:promptvar
 
--- -- set client encoding for query results to auto
--- -- > adjust if the detected default is not what you want
--- -- valid values are: 'UTF8', 'LATIN1', 'WIN1252'
--- \encoding 'auto'
+-- set client encoding for query results to auto
+-- > adjust if the detected default is not what you want
+-- valid values are: 'UTF8', 'LATIN1', 'WIN1252'
+\encoding 'auto'
 
--- \set ECHO queries
--- -- query the database
--- \ir 5_queries.sql
+\set ECHO queries
+-- query the database
+\ir 5_queries.sql
 
