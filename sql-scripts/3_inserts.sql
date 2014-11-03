@@ -56,7 +56,7 @@ INSERT INTO IstMitglied (spielerName, teamName) VALUES ('Kafka','B-Team');
 INSERT INTO IstMitglied (spielerName, teamName) VALUES ('Gustav','C-Team');
 INSERT INTO IstMitglied (spielerName, teamName) VALUES ('Snake','D-Team');
 INSERT INTO IstMitglied (spielerName, teamName) VALUES ('Tyran','A-Team');
-INSERT INTO IstMitglied (spielerName, teamName) VALUES ('Akke','E-Team');
+INSERT INTO IstMitglied (spielerName, teamName) VALUES ('Akke','A-Team');
 INSERT INTO IstMitglied (spielerName, teamName) VALUES ('Chuan','F-Team');
 INSERT INTO IstMitglied (spielerName, teamName) VALUES ('Akke','G-Team');
 INSERT INTO IstMitglied (spielerName, teamName) VALUES ('Gustav','B-Team');
