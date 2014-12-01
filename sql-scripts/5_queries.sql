@@ -57,3 +57,36 @@ JOIN IstMitglied i ON (i.teamName=t.teamName)
 JOIN Spieler s ON (s.spielerName=i.spielerName)
 WHERE s.passwort IN ('passwort1234')
 ORDER BY t.teamName;
+
+-- Aufgabe 3.2
+-- WINDOW-Function: Alle Punkte eines Teams zusammenzählen
+BEGIN;
+SELECT teamname, sum(punkte) OVER (PARTITION BY teamname) FROM TeamZuSpiel;
+-- forget all changes made since BEGIN
+ROLLBACK;
+
+-- Aufgabe 4.1
+-- VIEW Turnierspielliste des Turniers 3
+BEGIN;
+CREATE VIEW Turnierspielliste (SpielId, Zeit, Team) AS
+	SELECT szta.spielid, s.zeit, t.teamname FROM spiel AS s 
+		INNER JOIN spielzuturnieraustragung AS szta ON s.spielid = szta.spielid
+			INNER JOIN teamzuspiel AS t ON t.spielid = s.spielid
+	WHERE turnierId = 3;
+
+SELECT * FROM Turnierspielliste;
+
+-- forget all changes made since BEGIN
+ROLLBACK;
+
+-- Aufgabe 4.2
+-- VIEW Spielernamen
+BEGIN;
+CREATE VIEW Spielernamen (spielername, name, vorname) AS SELECT spielerName, name, vorname FROM Spieler;
+SELECT * FROM Spielernamen;
+UPDATE Spielernamen SET name = 'Blue' WHERE spielerName = 'Akke';
+SELECT * FROM Spielernamen;
+SELECT * FROM Spieler;
+
+-- forget all changes made since BEGIN
+ROLLBACK;

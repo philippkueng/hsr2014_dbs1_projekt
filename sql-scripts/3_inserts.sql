@@ -91,11 +91,11 @@ INSERT INTO TeamZuSpiel (teamName, spielId, punkte) VALUES ('B-Team',1,43);
 INSERT INTO TeamZuSpiel (teamName, spielId, punkte) VALUES ('C-Team',4,21);
 INSERT INTO TeamZuSpiel (teamName, spielId, punkte) VALUES ('D-Team',4,15);
 INSERT INTO TeamZuSpiel (teamName, spielId, punkte) VALUES ('A-Team',2,23);
-INSERT INTO TeamZuSpiel (teamName, spielId, punkte) VALUES ('F-Team',1,85);
-INSERT INTO TeamZuSpiel (teamName, spielId, punkte) VALUES ('E-Team',2,23);
-INSERT INTO TeamZuSpiel (teamName, spielId, punkte) VALUES ('G-Team',5,53);
-INSERT INTO TeamZuSpiel (teamName, spielId, punkte) VALUES ('E-Team',3,85);
-INSERT INTO TeamZuSpiel (teamName, spielId, punkte) VALUES ('A-Team',4,16);
+INSERT INTO TeamZuSpiel (teamName, spielId, punkte) VALUES ('F-Team',2,85);
+INSERT INTO TeamZuSpiel (teamName, spielId, punkte) VALUES ('E-Team',3,23);
+INSERT INTO TeamZuSpiel (teamName, spielId, punkte) VALUES ('G-Team',3,53);
+INSERT INTO TeamZuSpiel (teamName, spielId, punkte) VALUES ('E-Team',5,85);
+INSERT INTO TeamZuSpiel (teamName, spielId, punkte) VALUES ('A-Team',5,16);
 
 -- SpielZuTurnierAustragung
 INSERT INTO SpielZuTurnierAustragung (spielId, turnierId) VALUES (1,3);
