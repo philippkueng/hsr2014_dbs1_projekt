@@ -7,7 +7,7 @@ INSERT INTO Spieler (spielerName, name, vorname, email, passwort, plz) VALUES ('
 INSERT INTO Spieler (spielerName, name, vorname, email, passwort, plz) VALUES ('Chuan','Steiner','Hans','hansi@steiner.com','12441234', 2351);
 INSERT INTO Spieler (spielerName, name, vorname, email, passwort, plz) VALUES ('Dandy','Affolter','Vreni','dandylion@affolter.com','jahlkfaadsf', 1251);
 INSERT INTO Spieler (spielerName, name, vorname, email, passwort, plz) VALUES ('Franz','Müller','Franz','franz.mueller@gmail.com','passwort', 1235);
-INSERT INTO Spieler (spielerName, name, vorname, email, passwort, plz) VALUES ('Eddy','Meier','Max','meier.max.privat@bluewin.com','keyboard', 8357);
+INSERT INTO Spieler (spielerName, name, vorname, email, passwort, plz, likesMuffins) VALUES ('Eddy','Meier','Max','meier.max.privat@bluewin.com','keyboard', 8357, false);
 INSERT INTO Spieler (spielerName, name, vorname, email, passwort, plz) VALUES ('Kafka','Muster','Heiri','heiri.muster@yahoo.com','passwort1234', 8456);
 INSERT INTO Spieler (spielerName, name, vorname, email, passwort, plz) VALUES ('Gustav','Muster','Gustav','gustav.muster@hotmail.com','passwort1234', 3457);
 INSERT INTO Spieler (spielerName, name, vorname, email, passwort, plz) VALUES ('Snake','Schuler','Simon','schuler.simon@gmx.com','passwort1234', 3457);

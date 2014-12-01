@@ -15,6 +15,7 @@ CREATE TABLE Spieler (
   plz plz,
   email VARCHAR(255) NOT NULL,
   passwort VARCHAR(255) NOT NULL,
+  likesMuffins BOOLEAN DEFAULT TRUE,
   PRIMARY KEY (spielerName)
 );
 
