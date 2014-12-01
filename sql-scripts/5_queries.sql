@@ -32,15 +32,20 @@ WHERE t.teamName='A-Team';
 
 -- 3. Eine Query mit einer Unterabfrage (wenn immer möglich korreliert).
 -- Spieler im 'A-Team' anzeigen welche in nur einem Team sind.
-SELECT membershipCount.spielerName FROM
-	(SELECT s.spielerName, COUNT(s.spielerName) FROM
-		(SELECT u.spielerName FROM Spieler u 
-			JOIN IstMitglied i ON (u.spielerName=i.spielerName)
-			JOIN Team t ON (i.teamName=t.teamName)
-			WHERE t.teamName='A-Team') AS s
-		JOIN IstMitglied i ON (s.spielerName=i.spielerName)
-		GROUP BY s.spielerName) AS membershipCount
-		WHERE membershipCount.count=1;
+SELECT membershipCount.spielerName
+FROM
+  (SELECT s.spielerName, COUNT(s.spielerName)
+  FROM
+    (SELECT u.spielerName
+    FROM Spieler u 
+    JOIN IstMitglied i ON (u.spielerName=i.spielerName)
+    JOIN Team t ON (i.teamName=t.teamName)
+    WHERE t.teamName='A-Team'
+  ) AS s
+  JOIN IstMitglied i ON (s.spielerName=i.spielerName)
+  GROUP BY s.spielerName
+) AS membershipCount
+WHERE membershipCount.count=1;
 
 -- 4. Eine Query mit einer GROUP BY-Klausel
 -- bereits oben verwendet
