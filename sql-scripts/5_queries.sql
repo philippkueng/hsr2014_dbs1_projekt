@@ -58,6 +58,28 @@ JOIN Spieler s ON (s.spielerName=i.spielerName)
 WHERE s.passwort IN ('passwort1234')
 ORDER BY t.teamName;
 
+-- Aufgabe 3.1
+-- Subquery die ein Team mit der maximalen Anzahl an Punkten liefert.
+-- Die zweite Subquery ist nicht unkorreliert
+BEGIN;
+SELECT * 
+FROM team 
+WHERE teamname = 
+	(SELECT teamname 
+	FROM teamzuspiel 
+	WHERE punkte = 
+		(SELECT max(punkte) 
+		FROM teamzuspiel) LIMIT 1);
+-- COMMON TABLE EXPRESSION
+WITH sub1 AS (
+	SELECT teamname FROM teamzuspiel
+	WHERE punkte = (SELECT max(punkte) FROM teamzuspiel) LIMIT 1
+)
+SELECT * FROM sub1;
+
+-- forget all changes made since BEGIN
+ROLLBACK;
+
 -- Aufgabe 3.2
 -- WINDOW-Function: Alle Punkte eines Teams zusammenzählen
 BEGIN;
