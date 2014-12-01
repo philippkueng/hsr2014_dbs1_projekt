@@ -1,5 +1,10 @@
 -- Authors: Marko Gucanin, Philipp Küng
 
+CREATE DOMAIN plz AS TEXT
+CHECK(
+   VALUE ~ '^\d{4}$'
+);
+
 -- Da wir aktuell keine IDs haben welche keine n:m Beziehungen haben, fügen wir eine neue id Column hier ein.
 -- Anhand des types 'serial' wird der modifier 'not null default nextval('spieler_id_seq'::regclass)' automatisch gesetzt.
 CREATE TABLE Spieler (
@@ -7,6 +12,7 @@ CREATE TABLE Spieler (
   spielerName VARCHAR(255),
   name VARCHAR(255) NOT NULL,
   vorname VARCHAR(255) NOT NULL,
+  plz plz,
   email VARCHAR(255) NOT NULL,
   passwort VARCHAR(255) NOT NULL,
   PRIMARY KEY (spielerName)

@@ -2,16 +2,18 @@
 
 
 -- Spieler
-INSERT INTO Spieler (spielerName, name, vorname, email, passwort) VALUES ('Akke','Marxer','Markus','akke@example.com','admin1234');
-INSERT INTO Spieler (spielerName, name, vorname, email, passwort) VALUES ('Bulba','Widmer','Anna','bubla@wtf.com','passwort');
-INSERT INTO Spieler (spielerName, name, vorname, email, passwort) VALUES ('Chuan','Steiner','Hans','hansi@steiner.com','12441234');
-INSERT INTO Spieler (spielerName, name, vorname, email, passwort) VALUES ('Dandy','Affolter','Vreni','dandylion@affolter.com','jahlkfaadsf');
-INSERT INTO Spieler (spielerName, name, vorname, email, passwort) VALUES ('Franz','Müller','Franz','franz.mueller@gmail.com','passwort');
-INSERT INTO Spieler (spielerName, name, vorname, email, passwort) VALUES ('Eddy','Meier','Max','meier.max.privat@bluewin.com','keyboard');
-INSERT INTO Spieler (spielerName, name, vorname, email, passwort) VALUES ('Kafka','Muster','Heiri','heiri.muster@yahoo.com','passwort1234');
-INSERT INTO Spieler (spielerName, name, vorname, email, passwort) VALUES ('Gustav','Muster','Gustav','gustav.muster@hotmail.com','passwort1234');
-INSERT INTO Spieler (spielerName, name, vorname, email, passwort) VALUES ('Snake','Schuler','Simon','schuler.simon@gmx.com','passwort1234');
-INSERT INTO Spieler (spielerName, name, vorname, email, passwort) VALUES ('Tyran','Tyran','Theodor','tyran-online@hsr.ch','passwort1234');
+INSERT INTO Spieler (spielerName, name, vorname, email, passwort, plz) VALUES ('Akke','Marxer','Markus','akke@example.com','admin1234', 1234);
+INSERT INTO Spieler (spielerName, name, vorname, email, passwort, plz) VALUES ('Bulba','Widmer','Anna','bubla@wtf.com','passwort', 2512);
+INSERT INTO Spieler (spielerName, name, vorname, email, passwort, plz) VALUES ('Chuan','Steiner','Hans','hansi@steiner.com','12441234', 2351);
+INSERT INTO Spieler (spielerName, name, vorname, email, passwort, plz) VALUES ('Dandy','Affolter','Vreni','dandylion@affolter.com','jahlkfaadsf', 1251);
+INSERT INTO Spieler (spielerName, name, vorname, email, passwort, plz) VALUES ('Franz','Müller','Franz','franz.mueller@gmail.com','passwort', 1235);
+INSERT INTO Spieler (spielerName, name, vorname, email, passwort, plz) VALUES ('Eddy','Meier','Max','meier.max.privat@bluewin.com','keyboard', 8357);
+INSERT INTO Spieler (spielerName, name, vorname, email, passwort, plz) VALUES ('Kafka','Muster','Heiri','heiri.muster@yahoo.com','passwort1234', 8456);
+INSERT INTO Spieler (spielerName, name, vorname, email, passwort, plz) VALUES ('Gustav','Muster','Gustav','gustav.muster@hotmail.com','passwort1234', 3457);
+INSERT INTO Spieler (spielerName, name, vorname, email, passwort, plz) VALUES ('Snake','Schuler','Simon','schuler.simon@gmx.com','passwort1234', 3457);
+-- Dieses Insert wird nicht erfolgreich sein beim Daten einfügen.
+INSERT INTO Spieler (spielerName, name, vorname, email, passwort, plz) VALUES ('Tyran','Tyran','Theodor','tyran-online@hsr.ch','passwort1234', 123);
+INSERT INTO Spieler (spielerName, name, vorname, email, passwort, plz) VALUES ('Tyran','Tyran','Theodor','tyran-online@hsr.ch','passwort1234', 9645);
 
 -- Team
 INSERT INTO Team (teamName) VALUES ('A-Team');
