@@ -11,9 +11,13 @@ INSERT INTO Spieler (spielerName, name, vorname, email, passwort, plz, likesMuff
 INSERT INTO Spieler (spielerName, name, vorname, email, passwort, plz) VALUES ('Kafka','Muster','Heiri','heiri.muster@yahoo.com','passwort1234', 8456);
 INSERT INTO Spieler (spielerName, name, vorname, email, passwort, plz) VALUES ('Gustav','Muster','Gustav','gustav.muster@hotmail.com','passwort1234', 3457);
 INSERT INTO Spieler (spielerName, name, vorname, email, passwort, plz) VALUES ('Snake','Schuler','Simon','schuler.simon@gmx.com','passwort1234', 3457);
--- Dieses Insert wird nicht erfolgreich sein beim Daten einfügen.
+
+-- Dieses Inserts werden nicht erfolgreich sein beim Daten einfügen, weil die Types nicht stimmen oder Domain checks nicht passen.
 INSERT INTO Spieler (spielerName, name, vorname, email, passwort, plz) VALUES ('Tyran','Tyran','Theodor','tyran-online@hsr.ch','passwort1234', 123);
-INSERT INTO Spieler (spielerName, name, vorname, email, passwort, plz) VALUES ('Tyran','Tyran','Theodor','tyran-online@hsr.ch','passwort1234', 9645);
+INSERT INTO Spieler (spielerName, name, vorname, email, passwort, plz, likesMuffins) VALUES ('Tyran','Tyran','Theodor','tyran-online@hsr.ch','passwort1234', 123, 'HELL NO!!');
+INSERT INTO Spieler (spielerName, name, vorname, email, passwort, plz, likesMuffins) VALUES ('Tyran','Tyran','Theodor','tyran-online@hsr.ch','passwort1234', 123, 0);
+
+INSERT INTO Spieler (spielerName, name, vorname, email, passwort, plz, likesMuffins) VALUES ('Tyran','Tyran','Theodor','tyran-online@hsr.ch','passwort1234', 9645, false);
 
 -- Team
 INSERT INTO Team (teamName) VALUES ('A-Team');
