@@ -1,6 +1,9 @@
 -- Authors: Marko Gucanin, Philipp Küng
 
+-- Da wir aktuell keine IDs haben welche keine n:m Beziehungen haben, fügen wir eine neue id Column hier ein.
+-- Anhand des types 'serial' wird der modifier 'not null default nextval('spieler_id_seq'::regclass)' automatisch gesetzt.
 CREATE TABLE Spieler (
+  id SERIAL,
   spielerName VARCHAR(255),
   name VARCHAR(255) NOT NULL,
   vorname VARCHAR(255) NOT NULL,
