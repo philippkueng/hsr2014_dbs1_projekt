@@ -31,3 +31,9 @@ ALTER TABLE SpielZuTurnierAustragung
 ADD CONSTRAINT fk_SpielZuTurnierAustragungSpielId
   FOREIGN KEY (spielId) REFERENCES Spiel (spielId)
 ;
+
+-- Normalerweise würde diese constraint prüfen, dass keine Anmelde Fristen in der Vergangenheit gesetzt werden können.
+-- Da unsere Test Daten jedoch alle in der Vergangenheit liegen, machen wir den Check umgekehrt :-)
+ALTER TABLE Turnier ADD CONSTRAINT anmeldeFristNotInThePast CHECK (
+  anmeldungFrist < NOW()
+);

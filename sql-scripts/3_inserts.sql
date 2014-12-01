@@ -36,6 +36,8 @@ INSERT INTO Turnier (turnierId, gameName, teamAnzahlMin, teamAnzahlMax, teamGroe
 INSERT INTO Turnier (turnierId, gameName, teamAnzahlMin, teamAnzahlMax, teamGroesse, anmeldungFrist, turnierStatus) VALUES (5, 'Game 5', 2, 2, 2, TIMESTAMP '2005-05-17 07:15:31.123456789', 'Anmeldung geschlossen');
 INSERT INTO Turnier (turnierId, gameName, teamAnzahlMin, teamAnzahlMax, teamGroesse, anmeldungFrist, turnierStatus) VALUES (6, 'Game 6', 2, 2, 3, TIMESTAMP '2005-05-18 07:15:31.123456789', 'Anmeldung geschlossen');
 INSERT INTO Turnier (turnierId, gameName, teamAnzahlMin, teamAnzahlMax, teamGroesse, anmeldungFrist, turnierStatus) VALUES (7, 'Game 7', 2, 4, 2, TIMESTAMP '2005-05-19 07:15:31.123456789', 'Anmeldung offen');
+-- Test which violates the check constraint added on that table for the column anmeldeFrist
+INSERT INTO Turnier (turnierId, gameName, teamAnzahlMin, teamAnzahlMax, teamGroesse, anmeldungFrist, turnierStatus) VALUES (8, 'Game 7', 2, 4, 2, TIMESTAMP '2015-05-19 07:15:31.123456789', 'Anmeldung offen');
 
 -- TurnierAustragung
 INSERT INTO TurnierAustragung (turnierId, startDatum, turnierModus) VALUES (1, TIMESTAMP '2005-05-14 07:15:31.123456789', 'se');
